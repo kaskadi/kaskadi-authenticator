@@ -1,17 +1,17 @@
 **GitHub Actions workflows status**
 
-![](https://img.shields.io/github/workflow/status/kaskadi/template-kaskadi-element/testing?label=test)
-![](https://img.shields.io/github/workflow/status/kaskadi/template-kaskadi-element/publish?label=publish)
+![](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/testing?label=test)
+![](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/publish?label=publish)
 
 **CodeClimate**
 
-![](https://img.shields.io/codeclimate/maintainability/kaskadi/template-kaskadi-element)
-![](https://img.shields.io/codeclimate/tech-debt/kaskadi/template-kaskadi-element)
-![](https://img.shields.io/codeclimate/coverage/kaskadi/template-kaskadi-element)
+![](https://img.shields.io/codeclimate/maintainability/kaskadi/kaskadi-authenticator)
+![](https://img.shields.io/codeclimate/tech-debt/kaskadi/kaskadi-authenticator)
+![](https://img.shields.io/codeclimate/coverage/kaskadi/kaskadi-authenticator)
 
 **LGTM**
 
-[![](https://img.shields.io/lgtm/grade/javascript/github/kaskadi/template-kaskadi-element)](https://lgtm.com/projects/g/kaskadi/template-kaskadi-element/?mode=list)
+[![](https://img.shields.io/lgtm/grade/javascript/github/kaskadi/kaskadi-authenticator)](https://lgtm.com/projects/g/kaskadi/kaskadi-authenticator/?mode=list)
 
 ****
 
