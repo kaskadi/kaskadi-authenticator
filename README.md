@@ -1,7 +1,7 @@
 **GitHub Actions workflows status**
 
-![](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/testing?label=test)
-![](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/publish?label=publish)
+<!-- ![](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/testing?label=test) -->
+![](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/publish?label=build)
 
 **CodeClimate**
 
