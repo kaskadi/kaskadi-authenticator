@@ -16,7 +16,11 @@
     </style>
   </head>
   <body>
-    <kaskadi-authenticator></kaskadi-authenticator>
-    <div>Test</div>
+    <kaskadi-authenticator id="auth"></kaskadi-authenticator>
+    <script type="text/javascript">
+      auth.addEventListener('login', (e) => {
+        console.log(e.detail)
+      })
+    </script>
   </body>
 </html>

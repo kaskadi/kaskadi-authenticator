@@ -1,15 +1,21 @@
 /* eslint-env browser, mocha */
+/* global chai */
 import '../kaskadi-authenticator.js'
+const should = chai.should()
 describe('kaskadi-authenticator', () => {
-  it('should render the string "Hello World"', async () => {
-    // create kaskadi-authenticator element
-    var elem = document.createElement('kaskadi-authenticator')
+  let elem
+  before(async () => {
+    elem = document.createElement('kaskadi-authenticator')
     document.body.appendChild(elem)
-    // wait until it's finished rendering
     await elem.updateComplete
-    // actual test
-    elem.shadowRoot.querySelector('div').textContent.should.equal('Hello World!')
-    var cs = getComputedStyle(elem.shadowRoot.querySelector('div'))
-    cs.color.should.equal('rgb(255, 0, 0)')
+  })
+  it('should log in user', (done) => {
+    elem.addEventListener('login', (e) => {
+      should.exist(e.detail.accessToken)
+      done()
+    })
+    elem.shadowRoot.querySelector('#username').value = 'User'
+    elem.shadowRoot.querySelector('#password').value = 'secret!'
+    elem.shadowRoot.querySelector('button').click()
   })
 })
