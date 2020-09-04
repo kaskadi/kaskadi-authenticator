@@ -1,17 +1,15 @@
-**GitHub Actions workflows status**
-
-<!-- ![](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/testing?label=test) -->
-![](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/publish?label=build)
+[![Build status](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/build?label=build&logo=mocha)](https://github.com/kaskadi/kaskadi-authenticator/actions?query=workflow%3Abuild)
+[![Publish status](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/publish?label=publish&logo=mocha)](https://github.com/kaskadi/kaskadi-authenticator/actions?query=workflow%3Apublish)
 
 **CodeClimate**
 
-![](https://img.shields.io/codeclimate/maintainability/kaskadi/kaskadi-authenticator)
-![](https://img.shields.io/codeclimate/tech-debt/kaskadi/kaskadi-authenticator)
-![](https://img.shields.io/codeclimate/coverage/kaskadi/kaskadi-authenticator)
+[![](https://img.shields.io/codeclimate/maintainability/kaskadi/kaskadi-authenticator?label=maintainability&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/kaskadi-authenticator)
+[![](https://img.shields.io/codeclimate/tech-debt/kaskadi/kaskadi-authenticator?label=technical%20debt&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/kaskadi-authenticator)
+[![](https://img.shields.io/codeclimate/coverage/kaskadi/kaskadi-authenticator?label=test%20coverage&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/kaskadi-authenticator)
 
 **LGTM**
 
-[![](https://img.shields.io/lgtm/grade/javascript/github/kaskadi/kaskadi-authenticator)](https://lgtm.com/projects/g/kaskadi/kaskadi-authenticator/?mode=list)
+[![](https://img.shields.io/lgtm/grade/javascript/github/kaskadi/kaskadi-authenticator?label=code%20quality&logo=lgtm)](https://lgtm.com/projects/g/kaskadi/kaskadi-authenticator/?mode=list)
 
 ****
 
