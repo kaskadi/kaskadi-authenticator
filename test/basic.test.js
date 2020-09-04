@@ -2,7 +2,8 @@
 /* global chai */
 import '../kaskadi-authenticator.js'
 const should = chai.should()
-describe('kaskadi-authenticator', () => {
+describe('kaskadi-authenticator', function () {
+  this.timeout(30000)
   let elem
   before(async () => {
     elem = document.createElement('kaskadi-authenticator')
