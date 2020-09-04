@@ -1,5 +1,5 @@
 [![Build status](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/build?label=build&logo=mocha)](https://github.com/kaskadi/kaskadi-authenticator/actions?query=workflow%3Abuild)
-[![Publish status](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/publish?label=publish&logo=mocha)](https://github.com/kaskadi/kaskadi-authenticator/actions?query=workflow%3Apublish)
+[![Publish status](https://img.shields.io/github/workflow/status/kaskadi/kaskadi-authenticator/publish?label=publish&logo=Amazon%20AWS)](https://github.com/kaskadi/kaskadi-authenticator/actions?query=workflow%3Apublish)
 
 **CodeClimate**
 
