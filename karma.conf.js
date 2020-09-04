@@ -18,7 +18,6 @@ module.exports = config => {
     esm: {
       nodeResolve: true
     },
-    // singleRun: false, // Karma captures browsers, runs the tests and exits
     concurrency: Infinity
   })
   return config
