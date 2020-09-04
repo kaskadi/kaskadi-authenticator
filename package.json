@@ -9,9 +9,7 @@
   },
   "scripts": {
     "example": "xdg-open localhost:1234/example && serve -l 1234",
-    "test": "standard --fix && karma start --single-run --browsers ChromeHeadless karma.conf.js",
-    "kaskadi-init": "kaskadi init && git add -u && git commit -m 'initialized from template'",
-    "coverage": "cc-test-reporter before-build && npm test && cc-test-reporter after-build -t lcov -r 7b14f1f9497bb8e48bbd7efbe19c985f33ddc452ac0a5931699136a43494c6ee"
+    "test": "standard --fix && karma start --single-run --browsers ChromeHeadless karma.conf.js"
   },
   "repository": {
     "type": "git",
