@@ -7,6 +7,10 @@ on:
     paths:
       - '**.js'
       - 'example/index.html'
+env:
+  AWS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+  AWS_KEY_SECRET: ${{ secrets.AWS_KEY_SECRET }}
+  BUCKET: ${{ secrets.S3_PUBLIC_BUCKET }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,7 +25,3 @@ jobs:
         coverageCommand: npm test
     - name: Upload files to S3 bucket
       uses: kaskadi/action-s3cp@master
-      env:
-        AWS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
-        AWS_KEY_SECRET: ${{ secrets.AWS_KEY_SECRET }}
-        BUCKET: ${{ secrets.S3_PUBLIC_BUCKET }}
