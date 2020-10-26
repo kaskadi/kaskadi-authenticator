@@ -9,7 +9,7 @@ import { KaskadiElement, html } from 'https://cdn.klimapartner.net/modules/@kask
  * @module kaskadi-authenticator
  *
  * @param {string} lang - element's language
- * @param {Event} onlogin - after attempting to log in the event will dispatch a `login` event containing in its `detail` the response payload
+ * @param {Event} onlogin - after attempting to log in the element will dispatch a `login` event containing in its `detail` the response payload
  *
  * @example
  *
