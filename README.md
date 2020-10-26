@@ -51,7 +51,7 @@ In the browser:
 
 Element offering a login interface to Kaskadi's project backend.
 
-This consists of 2 fields for respectively username and password. It then send a request to the backend and dispatches a new event with the login attempt response.
+This consists of two input fields for respectively username and password. It then sends a request to the backend and dispatches a new event with the login attempt response.
 
 
 | Param | Type | Description |
