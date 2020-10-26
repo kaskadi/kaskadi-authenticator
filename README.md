@@ -57,7 +57,7 @@ This consists of two input fields for respectively username and password. It the
 | Param | Type | Description |
 | --- | --- | --- |
 | lang | `string` | element's language |
-| onlogin | `Event` | after attempting to log in the event will dispatch a `login` event containing in its `detail` the response payload |
+| onlogin | `Event` | after attempting to log in the element will dispatch a `login` event containing in its `detail` the response payload |
 
 **Example**  
 ```html
