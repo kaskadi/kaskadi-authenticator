@@ -1,6 +1,21 @@
 /* eslint-env browser, mocha */
 import { KaskadiElement, html } from 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-element/kaskadi-element.js'
 
+/**
+ * Element offering a login interface to Kaskadi's project backend.
+ *
+ * This consists of 2 fields for respectively username and password. It then send a request to the backend and dispatches a new event with the login attempt response.
+ *
+ * @module kaskadi-authenticator
+ *
+ * @param {string} lang - element's language
+ * @param {Event} onlogin - after attempting to log in, the event will dispatch a `login` event containing in its `details` the response payload
+ *
+ * @example
+ *
+ * <kaskadi-authenticator lang="en"></kaskadi-authenticator>
+ */
+
 class KaskadiAuthenticator extends KaskadiElement {
   constructor () {
     super()
@@ -25,7 +40,7 @@ class KaskadiAuthenticator extends KaskadiElement {
     }
     await fetch('https://api.klimapartner.net/auth/login', init)
       .then(res => res.json())
-      .then(json => new CustomEvent('login', { detail: json }))
+      .then(json => new CustomEvent('login', { details: json }))
       .then(event => this.dispatchEvent(event))
   }
 
