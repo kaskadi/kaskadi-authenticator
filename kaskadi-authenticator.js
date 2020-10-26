@@ -9,7 +9,7 @@ import { KaskadiElement, html } from 'https://cdn.klimapartner.net/modules/@kask
  * @module kaskadi-authenticator
  *
  * @param {string} lang - element's language
- * @param {Event} onlogin - after attempting to log in the event will dispatch a `login` event containing in its `details` the response payload
+ * @param {Event} onlogin - after attempting to log in the event will dispatch a `login` event containing in its `detail` the response payload
  *
  * @example
  *
@@ -40,7 +40,7 @@ class KaskadiAuthenticator extends KaskadiElement {
     }
     await fetch('https://api.klimapartner.net/auth/login', init)
       .then(res => res.json())
-      .then(json => new CustomEvent('login', { details: json }))
+      .then(json => new CustomEvent('login', { detail: json }))
       .then(event => this.dispatchEvent(event))
   }
 
