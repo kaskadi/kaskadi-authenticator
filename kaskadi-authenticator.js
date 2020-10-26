@@ -1,7 +1,7 @@
 /* eslint-env browser, mocha */
-import { html, LitElement } from 'https://cdn.klimapartner.net/modules/lit-element/lit-element.js'
+import { KaskadiElement, html } from 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-element/kaskadi-element.js'
 
-class KaskadiAuthenticator extends LitElement {
+class KaskadiAuthenticator extends KaskadiElement {
   constructor () {
     super()
     this.lang = 'en'
@@ -23,12 +23,10 @@ class KaskadiAuthenticator extends LitElement {
       method: 'POST',
       body: JSON.stringify(fetchBody)
     }
-    const res = await fetch('https://97j2nzedqk.execute-api.eu-central-1.amazonaws.com/prod/auth/login', init)
-    const json = await res.json()
-    const event = new CustomEvent('login', {
-      detail: json
-    })
-    this.dispatchEvent(event)
+    await fetch('https://api.klimapartner.net/auth/login', init)
+      .then(res => res.json())
+      .then(json => new CustomEvent('login', { detail: json }))
+      .then(event => this.dispatchEvent(event))
   }
 
   render () {
