@@ -1,7 +1,22 @@
 /* eslint-env browser, mocha */
-import { html, LitElement } from 'https://cdn.klimapartner.net/modules/lit-element/lit-element.js'
+import { KaskadiElement, html } from 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-element/kaskadi-element.js'
 
-class KaskadiAuthenticator extends LitElement {
+/**
+ * Element offering a login interface to Kaskadi's project backend.
+ *
+ * This consists of 2 fields for respectively username and password. It then send a request to the backend and dispatches a new event with the login attempt response.
+ *
+ * @module kaskadi-authenticator
+ *
+ * @param {string} lang - element's language
+ * @param {Event} onlogin - after attempting to log in, the event will dispatch a `login` event containing in its `details` the response payload
+ *
+ * @example
+ *
+ * <kaskadi-authenticator lang="en"></kaskadi-authenticator>
+ */
+
+class KaskadiAuthenticator extends KaskadiElement {
   constructor () {
     super()
     this.lang = 'en'
@@ -23,12 +38,10 @@ class KaskadiAuthenticator extends LitElement {
       method: 'POST',
       body: JSON.stringify(fetchBody)
     }
-    const res = await fetch('https://97j2nzedqk.execute-api.eu-central-1.amazonaws.com/prod/auth/login', init)
-    const json = await res.json()
-    const event = new CustomEvent('login', {
-      detail: json
-    })
-    this.dispatchEvent(event)
+    await fetch('https://api.klimapartner.net/auth/login', init)
+      .then(res => res.json())
+      .then(json => new CustomEvent('login', { details: json }))
+      .then(event => this.dispatchEvent(event))
   }
 
   render () {
