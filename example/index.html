@@ -13,13 +13,17 @@
         margin: 0;
         padding: 0;
       }
+      #result {
+        color: rebeccapurple;
+      }
     </style>
   </head>
   <body>
     <kaskadi-authenticator id="auth"></kaskadi-authenticator>
+    <div id="result"></div>
     <script type="text/javascript">
       auth.addEventListener('login', (e) => {
-        console.log(e.detail)
+        document.querySelector('#result').textContent = JSON.stringify(e.detail)
       })
     </script>
   </body>
