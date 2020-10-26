@@ -12,7 +12,7 @@ describe('kaskadi-authenticator', function () {
   })
   it('should log in user', (done) => {
     elem.addEventListener('login', (e) => {
-      should.exist(e.detail.accessToken)
+      should.exist(e.details.accessToken)
       done()
     })
     elem.shadowRoot.querySelector('#username').value = 'User'
