@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: npm i
     - name: Generate coverage report
-      run: npm test
+      run: npm run coverage
     - name: Upload report to Code Climate
       uses: kaskadi/action-cc-reporter@master
       env:
