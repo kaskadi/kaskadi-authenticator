@@ -67,7 +67,7 @@ This consists of two input fields for respectively username and password. It the
 
 ## Custom styles
 
-No custom CSS properties found in this element...
+No custom CSS properties found in this element.
 <!-- automatically generated documentation will be placed in here -->
 
 <!-- You can customize this template as you'd like! -->
