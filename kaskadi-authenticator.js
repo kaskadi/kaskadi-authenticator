@@ -6,28 +6,18 @@ import { KaskadiElement, html } from 'https://cdn.klimapartner.net/modules/@kask
  *
  * This consists of two input fields for respectively username and password. It then sends a request to the backend and dispatches a new event with the login attempt response.
  *
+ * This element inherits properties from a base class `KaskadiElement`. To see which properties are available, please refer to [`KaskadiElement` documentation](https://github.com/kaskadi/kaskadi-element).
+ *
  * @module kaskadi-authenticator
  *
- * @param {string} lang - element's language
- * @param {Event} onlogin - after attempting to log in the element will dispatch a `login` event containing in its `detail` the response payload
+ * @param {Event} onlogin - after attempting to log in the element will dispatch a `login` event containing in its `detail` field the response payload
  *
  * @example
  *
- * <kaskadi-authenticator lang="en"></kaskadi-authenticator>
+ * <kaskadi-authenticator></kaskadi-authenticator>
  */
 
 class KaskadiAuthenticator extends KaskadiElement {
-  constructor () {
-    super()
-    this.lang = 'en'
-  }
-
-  static get properties () {
-    return {
-      lang: { type: String }
-    }
-  }
-
   async authenticate (e) {
     const fetchBody = {
       Username: this.shadowRoot.querySelector('#username').value,
