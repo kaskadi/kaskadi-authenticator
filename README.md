@@ -53,17 +53,20 @@ Element offering a login interface to Kaskadi's project backend.
 
 This consists of two input fields for respectively username and password. It then sends a request to the backend and dispatches a new event with the login attempt response.
 
+This element inherits properties from a base class `KaskadiElement`. To see which properties are available, please refer to [`KaskadiElement` documentation].
+
 
 | Param | Type | Description |
 | --- | --- | --- |
-| lang | `string` | element's language |
-| onlogin | `Event` | after attempting to log in the element will dispatch a `login` event containing in its `detail` the response payload |
+| onlogin | `Event` | after attempting to log in the element will dispatch a `login` event containing in its `detail` field the response payload |
 
 **Example**  
 ```html
-<kaskadi-authenticator lang="en"></kaskadi-authenticator>
+<kaskadi-authenticator></kaskadi-authenticator>
 ```
 <!-- LINKS -->
+
+[`KaskadiElement` documentation]:https://github.com/kaskadi/kaskadi-element
 
 ## Custom styles
 
