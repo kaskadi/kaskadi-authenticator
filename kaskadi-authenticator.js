@@ -45,5 +45,3 @@ class KaskadiAuthenticator extends KaskadiElement {
 }
 
 customElements.define('kaskadi-authenticator', KaskadiAuthenticator)
-
-// force
